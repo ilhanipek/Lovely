@@ -14,6 +14,7 @@ struct OnboardingView: View {
     NavigationStack {
       ZStack {
         AppColors.backgroundWhite
+          .ignoresSafeArea()
         VStack {
           RoundedRectangle(cornerRadius: 70)
             .fill(.white)
@@ -56,8 +57,10 @@ struct OnboardingView: View {
                 Text("Build stronger bonds through meaningful interactions.")
                   .font(.body)
                   .foregroundColor(.gray)
-                  .frame(width: screenWidth / 1.8, alignment: .leading)
-                  .padding(.top, 5)
+                  .frame(width: screenWidth / 1.6, height: 40, alignment: .leading)
+                  .padding( 5)
+                  .lineLimit(2)
+                  .minimumScaleFactor(0.7)
                 Spacer()
               }
               HStack {

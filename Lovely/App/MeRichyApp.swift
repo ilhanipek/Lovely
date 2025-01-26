@@ -14,8 +14,8 @@ struct LovelyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if !localState.hasOnboarded {
-
+            if localState.hasOnboarded {
+              MainTabView()
             } else {
                 OnboardingView()
             }
